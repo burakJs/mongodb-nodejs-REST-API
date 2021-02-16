@@ -1,0 +1,26 @@
+@hostname = http://localhost:3000/orders
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im96YW55acSfaXRAZ21haWwuY29tIiwidXNlcklkIjoiNWZlODllODg2ZDQyZTIzYjYzOWJhNDAzIiwiaWF0IjoxNjA5MTA0OTg1LCJleHAiOjE2MDkxMDg1ODV9.dIGZIZaOepxb481RUrHKrEwKLW4eh9mWIvb5T68xZls
+###
+GET {{hostname}}
+Authorization: {{token}} 
+###
+GET {{hostname}}/5fe3ec695e1cdb0dd375f66c
+Authorization: {{token}} 
+
+###
+POST {{hostname}}
+Authorization: {{token}} 
+Content-Type: application/json
+
+{
+    "productId":"5fe3ec265e1cdb0dd375f66b",
+    "quantity":"3"
+}
+
+###
+DELETE {{hostname}}/5fe3ec695e1cdb0dd375f66c HTTP/1.1
+
+###
+
+DELETE {{hostname}} HTTP/1.1
+Authorization: {{token}} 

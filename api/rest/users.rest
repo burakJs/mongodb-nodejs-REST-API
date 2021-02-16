@@ -1,0 +1,29 @@
+@hostname = http://localhost:3000/user
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im96YW55acSfaXRAZ21haWwuY29tIiwidXNlcklkIjoiNWZlNTBmNjI3Y2MyZTUxZTNmYjNhZWI1IiwiaWF0IjoxNjA5MDgwNDExLCJleHAiOjE2MDkwODQwMTF9.Z480X4mQ5JFuHh2Rkrt2pZLY8v_tbB1Wa9qmMPG14BA
+###
+
+GET {{hostname}}
+###
+POST {{hostname}}/signup
+Content-Type: application/json
+
+{
+    "email": "ozanyigit@gmail.com",
+    "password": "123456"
+}
+
+###
+
+POST {{hostname}}/signin 
+Content-Type: application/json
+
+{
+    "email": "ozanyigit@gmail.com",
+    "password": "123456"
+}
+
+###
+DELETE {{hostname}}/5fe50f627cc2e51e3fb3aeb5
+Authorization: bearer {{token}}
+
+

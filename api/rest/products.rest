@@ -1,0 +1,31 @@
+@hostname = http://localhost:3000/products
+
+###
+GET {{hostname}}
+
+###
+GET {{hostname}}/5fe3ec265e1cdb0dd375f66b
+
+###
+POST {{hostname}}
+Content-Type: application/json 
+
+{
+    "name":"burak xsadadads",
+    "price":"14"
+}
+
+###
+PATCH {{hostname}}/5fe37917ded37b2ee4f8aa70
+Content-Type: application/json
+
+[
+    {
+        "propName":"price","value":"14"
+    }
+]
+
+###
+DELETE {{hostname}}/5fe3d933a493dc0a2a7a23d0 HTTP/1.1
+
+###
